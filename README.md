@@ -1,7 +1,7 @@
 #### Important-Basic-Android-Codes
 ---------------------------------------
 #SharedPreference Demmo For First time visit activity
-<pre>
+```java
 onCreate(){
 
 Boolean flag;
@@ -30,7 +30,8 @@ Boolean flag;
 
  
 }
-</pre>
+```
+
 
 ##Links
 http://stackoverflow.com/questions/21980324/how-to-display-only-one-time-login-and-then-after-start-application-directly-in
