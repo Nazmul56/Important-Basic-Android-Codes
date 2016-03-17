@@ -48,7 +48,19 @@ Boolean flag;
  
 }
 ```
+#Relise Activity Memories 
 
+```java
+
+ // Here we add Pause mathod to release memory.
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        finish();//this mathod will release memory of splashActivity .
+    }
+    
+ ```
 :+1:
 
 ##Links
