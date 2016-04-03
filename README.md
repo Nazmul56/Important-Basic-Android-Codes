@@ -6,6 +6,19 @@
 <a href="https://play.google.com/store/apps/details?id=christmaswallpaper.nazmul"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" width="300" /></a>
 #### Important-Basic-Android-Codes
 ---------------------------------------
+#Button
+```java
+
+Button sites =  (Button) findViewById(R.id.site);
+        sites.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                
+            }
+        });
+
+```
 #Intent 
 ```java
 Intent intent = new Intent(this, MainActivity.class);
