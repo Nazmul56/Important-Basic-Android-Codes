@@ -29,6 +29,18 @@ or
 Intent intent = new Intent("com.the.name");
 startActivity(i);
 ```
+#Pause For 1 Second
+```java
+try {
+
+
+                Thread.sleep(2000);
+                // i=1000;
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+```
+
 
 #SharedPreference Demmo For First time visit activity
 ```java
