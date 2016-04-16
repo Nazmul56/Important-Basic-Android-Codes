@@ -29,6 +29,31 @@ or
 Intent intent = new Intent("com.the.name");
 startActivity(i);
 ```
+#Pass Argument between different activitys
+####Sender Activity
+```java
+String stringExtra = "Some string you want to pass";
+
+Intent intent = new Intent(this, AndroidTabRestaurantDescSearchListView.class);
+
+//include the string in your intent
+intent.putExtra("string", stringExtra);
+
+startActivity(intent)
+```
+####Recever Activity
+```java
+//fetch the string  from the intent
+String extraFromAct1 = getIntent().getStringExtra("string");
+
+Intent intent = new Intent(this, RatingDescriptionSearchActivity.class);
+
+//attach same string and send it with the intent
+intent.putExtra("string", extraFromAct1);
+startActivity(intent);
+```
+
+
 #Pause For 1 Second
 ```java
 try {
