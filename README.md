@@ -65,7 +65,26 @@ try {
                 e.printStackTrace();
             }
 ```
+#Different String Format
+```java
+   tvDay.setText("" + String.format("%02d", days));
+   tvHour.setText("" + String.format("%02d", hours));
+   tvMinute.setText("" + String.format("%02d", minutes));
+   tvSecond.setText("" + String.format("%02d", seconds));
+ ```
+#System Curent Date and Time 
+```java
+   TextView tvDisplayDate = (TextView) findViewbyId(R.id.datetv);
+   long date = System.currentTimeMillis(); 
 
+   SimpleDateFormat sdf = new SimpleDateFormat("MMM MM dd, yyyy h:mm a");
+   String dateString = sdf.format(date);   
+   tvDisplayDate.setText(dateString);
+```
+```java
+Mon Jan 5, 2009 4:55 PM
+```
+                        
 
 #SharedPreference Demmo For First time visit activity
 ```java
