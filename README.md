@@ -29,6 +29,15 @@ or
 Intent intent = new Intent("com.the.name");
 startActivity(i);
 ```
+#EditText
+```java 
+ EditText Member_id = (EditText)findViewById(R.id.member_id_etx);
+ Member_id.getText().toString()
+ ```
+#Toast
+```java
+ Toast.makeText(getApplicationContext(), "Hello World", Toast.LENGTH_SHORT).show();
+```
 #Pass Argument between different activitys
 ####Sender Activity
 ```java
