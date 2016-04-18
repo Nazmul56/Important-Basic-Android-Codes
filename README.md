@@ -29,6 +29,19 @@ or
 Intent intent = new Intent("com.the.name");
 startActivity(i);
 ```
+#Map
+```java
+  Map map = new HashMap();
+
+    map.put("name", "John");
+    map.put("time", "9648512236521");
+    map.put("age", "25");
+
+    long time = Long.valueOf((String)map.get("time")).longValue() ;
+    int age = Integer.valueOf((String)  map.get("aget")).intValue();
+    System.out.println(time);
+    System.out.println(age);
+    ```
 #EditText
 ```java 
  EditText Member_id = (EditText)findViewById(R.id.member_id_etx);
