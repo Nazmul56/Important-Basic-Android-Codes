@@ -47,6 +47,13 @@ startActivity(i);
  EditText Member_id = (EditText)findViewById(R.id.member_id_etx);
  Member_id.getText().toString()
  ```
+#Change Action Title 
+```java
+  Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        String Title= getIntent().getStringExtra("title");
+        toolbar.setTitle(Title);
+        setSupportActionBar(toolbar);
+```
 #Toast
 ```java
  Toast.makeText(getApplicationContext(), "Hello World", Toast.LENGTH_SHORT).show();
