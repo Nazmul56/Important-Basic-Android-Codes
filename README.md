@@ -194,5 +194,5 @@ http://inducesmile.com/android/android-recyclerview-and-cardview-in-material-des
 Recycler Grid View
 http://inducesmile.com/android/android-gridlayoutmanager-with-recyclerview-in-material-design/
 http://stackoverflow.com/questions/21980324/how-to-display-only-one-time-login-and-then-after-start-application-directly-in
-
+Sound Cloud App Link http://www.sitepoint.com/develop-music-streaming-android-app/
 http://upadhyayjiteshandroid.blogspot.in/2013/01/android-working-with-shared-preferences.html
