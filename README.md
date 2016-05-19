@@ -47,6 +47,11 @@ startActivity(i);
  EditText Member_id = (EditText)findViewById(R.id.member_id_etx);
  Member_id.getText().toString()
  ```
+ 
+ #Log
+ ```java
+  Log.d("MyActivity", "Alarm Off");
+  ```
 #Change Action Title 
 ```java
   Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
