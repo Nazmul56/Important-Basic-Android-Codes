@@ -40,8 +40,9 @@ startActivity(i);
     long time = Long.valueOf((String)map.get("time")).longValue() ;
     int age = Integer.valueOf((String)  map.get("aget")).intValue();
     System.out.println(time);
-    System.out.println(age);
-    ```
+    System.out.println(age); 
+```
+
 #EditText
 ```java 
  EditText Member_id = (EditText)findViewById(R.id.member_id_etx);
