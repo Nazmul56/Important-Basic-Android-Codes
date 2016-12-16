@@ -29,6 +29,8 @@ or
 Intent intent = new Intent("com.the.name");
 startActivity(i);
 ```
+#how to reference non static method from static mehod
+((YourActivityName) getContext()).setAdapter(selectedTabPosition);
 #Map
 ```java
   Map map = new HashMap();
