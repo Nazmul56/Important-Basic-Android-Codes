@@ -4,9 +4,9 @@
 
 <p>Sample App:</p>
 <a href="https://play.google.com/store/apps/details?id=christmaswallpaper.nazmul"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" width="300" /></a>
-#Important-Basic-Android-Codes
+Important-Basic-Android-Codes
 ---------------------------------------
-#Button
+Button
 ```java
 
 Button sites =  (Button) findViewById(R.id.site);
@@ -19,7 +19,7 @@ Button sites =  (Button) findViewById(R.id.site);
         });
 
 ```
-#Intent 
+Intent 
 ```java
 Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
@@ -29,9 +29,9 @@ or
 Intent intent = new Intent("com.the.name");
 startActivity(i);
 ```
-#how to reference non static method from static mehod
+how to reference non static method from static mehod
 ((YourActivityName) getContext()).setAdapter(selectedTabPosition);
-#Map
+Map
 ```java
   Map map = new HashMap();
 
@@ -45,29 +45,29 @@ startActivity(i);
     System.out.println(age); 
 ```
 
-#EditText
+EditText
 ```java 
  EditText Member_id = (EditText)findViewById(R.id.member_id_etx);
  Member_id.getText().toString()
  ```
  
- #Log
+ Log
  ```java
   Log.d("MyActivity", "Alarm Off");
   ```
-#Change Action Title 
+Change Action Title 
 ```java
   Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         String Title= getIntent().getStringExtra("title");
         toolbar.setTitle(Title);
         setSupportActionBar(toolbar);
 ```
-#Toast
+Toast
 ```java
  Toast.makeText(getApplicationContext(), "Hello World", Toast.LENGTH_SHORT).show();
 ```
-#Pass Argument between different activitys
-####Sender Activity
+Pass Argument between different activitys
+Sender Activity
 ```java
 String stringExtra = "Some string you want to pass";
 
@@ -78,7 +78,7 @@ intent.putExtra("string", stringExtra);
 
 startActivity(intent)
 ```
-####Recever Activity
+Recever Activity
 ```java
 //fetch the string  from the intent
 String extraFromAct1 = getIntent().getStringExtra("string");
@@ -89,7 +89,7 @@ Intent intent = new Intent(this, RatingDescriptionSearchActivity.class);
 intent.putExtra("string", extraFromAct1);
 startActivity(intent);
 ```
-#JSON Generator
+JSON Generator
 ```php
 <?php
 
@@ -118,7 +118,7 @@ startActivity(intent);
 ```
 
 
-#Pause For 1 Second
+Pause For 1 Second
 ```java
 try {
 
@@ -129,14 +129,14 @@ try {
                 e.printStackTrace();
             }
 ```
-#Different String Format
+Different String Format
 ```java
    tvDay.setText("" + String.format("%02d", days));
    tvHour.setText("" + String.format("%02d", hours));
    tvMinute.setText("" + String.format("%02d", minutes));
    tvSecond.setText("" + String.format("%02d", seconds));
  ```
-#System Curent Date and Time 
+System Curent Date and Time 
 ```java
    TextView tvDisplayDate = (TextView) findViewbyId(R.id.datetv);
    long date = System.currentTimeMillis(); 
@@ -150,7 +150,7 @@ Mon Jan 5, 2009 4:55 PM
 ```
                         
 
-#SharedPreference Demmo For First time visit activity
+SharedPreference Demmo For First time visit activity
 ```java
 onCreate(){
 
@@ -181,7 +181,7 @@ Boolean flag;
  
 }
 ```
-#Relise Activity Memories 
+Relise Activity Memories 
 
 ```java
 
@@ -196,7 +196,7 @@ Boolean flag;
  ```
 :+1:
 
-##Links
+Links
 Card View Link
 http://inducesmile.com/android/android-recyclerview-and-cardview-in-material-design-tutorial/
 Recycler Grid View
