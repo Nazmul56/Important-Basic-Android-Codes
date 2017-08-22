@@ -126,6 +126,83 @@ try {
                 e.printStackTrace();
             }
 ```
+Simle Timer
+```Java
+
+/**Global Variables*/
+Handler handler;
+long MillisecondTime, StartTime, TimeBuff, UpdateTime = 0L ;
+TextView textView ;
+
+/**On Create*/
+handler = new Handler() ;
+textView = (TextView)findViewById(R.id.stopWatch);
+
+/** Method OutSide Of oncreate */
+private void startTimer() {
+
+        StartTime = SystemClock.uptimeMillis();
+        handler.postDelayed(runnable, 0);
+    }
+
+private void stopTimer() {
+        if(UpdateTime != 0L) {
+            MillisecondTime = 0L;
+            StartTime = 0L;
+            TimeBuff = 0L;
+            UpdateTime = 0L;
+            Seconds = 0;
+            Minutes = 0;
+            MilliSeconds = 0;
+            handler.removeCallbacks(runnable);
+            textView.setText("00:00");
+        }
+    }
+
+/**Initialize the Timer Thread*/
+    public Runnable runnable = new Runnable() {
+
+        public void run() {
+            MillisecondTime = SystemClock.uptimeMillis() - StartTime;
+            UpdateTime = TimeBuff + MillisecondTime;
+            Seconds = (int) (UpdateTime / 1000);
+            Minutes = Seconds / 60;
+            Seconds = Seconds % 60;
+            MilliSeconds = (int) (UpdateTime % 1000);
+            
+/**Where the Update UI*/
+            textView.setText("" + Minutes + ":"
+                    + String.format("%02d", Seconds)  /*+ ":"
+                   + String.format("%03d", MilliSeconds)*/);
+            handler.postDelayed(this, 0);
+        }
+    };
+```
+Handler As Do Any Task After 5sec
+```java
+
+    // Splash screen timer
+    private static int SPLASH_TIME_OUT = 5000;
+    
+   new Handler().postDelayed(new Runnable() {
+
+            /*
+             * Showing splash screen with a timer. This will be useful when you
+             * want to show case your app logo / company
+             */
+
+            @Override
+            public void run() {
+                // This method will be executed once the timer is over
+                // Start your app main activity
+                Intent i = new Intent(splash.this, LoginActivity.class);
+                startActivity(i);
+
+                // close this activity
+                finish();
+            }
+        }, SPLASH_TIME_OUT);
+```
 Different String Format
 ```java
    tvDay.setText("" + String.format("%02d", days));
