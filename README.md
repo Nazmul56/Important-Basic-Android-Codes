@@ -126,7 +126,7 @@ try {
                 e.printStackTrace();
             }
 ```
-Simle Timer
+Simple Timer
 ```Java
 
 /**Global Variables*/
