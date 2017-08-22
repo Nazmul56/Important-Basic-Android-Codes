@@ -9,7 +9,7 @@ Important-Basic-Android-Codes
 =============================
 
 Button
----------------
+------
 ```java
 Button sites =  (Button) findViewById(R.id.site);
         sites.setOnClickListener(new View.OnClickListener() {
@@ -18,7 +18,8 @@ Button sites =  (Button) findViewById(R.id.site);
             }
         });
 ```
-Intent 
+Intent
+------
 ```java
 Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
@@ -29,8 +30,11 @@ Intent intent = new Intent("com.the.name");
 startActivity(i);
 ```
 how to reference non static method from static mehod
+----------------------------------------------------
 ((YourActivityName) getContext()).setAdapter(selectedTabPosition);
+
 Map
+---
 ```java
   Map map = new HashMap();
 
@@ -45,16 +49,18 @@ Map
 ```
 
 EditText
+--------
 ```java 
  EditText Member_id = (EditText)findViewById(R.id.member_id_etx);
  Member_id.getText().toString()
  ```
- 
- Log
+Log
+---
  ```java
   Log.d("MyActivity", "Alarm Off");
   ```
-Change Action Title 
+Change Action Title
+-------------------
 ```java
   Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         String Title= getIntent().getStringExtra("title");
@@ -62,10 +68,12 @@ Change Action Title
         setSupportActionBar(toolbar);
 ```
 Toast
+-----
 ```java
  Toast.makeText(getApplicationContext(), "Hello World", Toast.LENGTH_SHORT).show();
 ```
 Pass Argument between different activitys
+-----------------------------------------
 Sender Activity
 ```java
 String stringExtra = "Some string you want to pass";
@@ -89,6 +97,7 @@ intent.putExtra("string", extraFromAct1);
 startActivity(intent);
 ```
 JSON Generator
+--------------
 ```php
 <?php
 
@@ -118,6 +127,7 @@ JSON Generator
 
 
 Pause For 1 Second
+------------------
 ```java
 try {
 
@@ -129,6 +139,7 @@ try {
             }
 ```
 Simple Timer
+------------
 ```Java
 
 /**Global Variables*/
@@ -181,6 +192,7 @@ private void stopTimer() {
     };
 ```
 Handler As Do Any Task After 5sec
+----------------------------------
 ```java
 
     // Splash screen timer
@@ -206,13 +218,15 @@ Handler As Do Any Task After 5sec
         }, SPLASH_TIME_OUT);
 ```
 Different String Format
+-----------------------
 ```java
    tvDay.setText("" + String.format("%02d", days));
    tvHour.setText("" + String.format("%02d", hours));
    tvMinute.setText("" + String.format("%02d", minutes));
    tvSecond.setText("" + String.format("%02d", seconds));
  ```
-System Curent Date and Time 
+System Curent Date and Time
+---------------------------
 ```java
    TextView tvDisplayDate = (TextView) findViewbyId(R.id.datetv);
    long date = System.currentTimeMillis(); 
@@ -227,6 +241,7 @@ Mon Jan 5, 2009 4:55 PM
                         
 
 SharedPreference Demmo For First time visit activity
+----------------------------------------------------
 ```java
 onCreate(){
 
@@ -257,8 +272,8 @@ Boolean flag;
  
 }
 ```
-Relise Activity Memories 
-
+Relise Activity Memories
+------------------------
 ```java
 
  // Here we add Pause mathod to release memory.
