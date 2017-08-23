@@ -31,7 +31,27 @@ startActivity(i);
 ```
 how to reference non static method from static mehod
 ----------------------------------------------------
+```java
 ((YourActivityName) getContext()).setAdapter(selectedTabPosition);
+```
+Viration
+--------
+```java
+Vibrator = v; // Global
+
+v = (Vibrator) getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
+            // Vibrate for 500 milliseconds
+            //v.vibrate(500);
+            final Vibrator j ;
+            j = v;
+
+            long[] pattern = {0, 100, 1000};
+
+            // The '0' here means to repeat indefinitely
+            // '0' is actually the index at which the pattern keeps repeating from (the start)
+           mic // To repeat the pattern from any other point, you could increase the index, e.g. '1'
+            j.vibrate(pattern, 0);
+ ```
 
 Map
 ---
