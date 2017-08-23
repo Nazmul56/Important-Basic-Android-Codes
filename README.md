@@ -52,6 +52,15 @@ v = (Vibrator) getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE
            mic // To repeat the pattern from any other point, you could increase the index, e.g. '1'
             j.vibrate(pattern, 0);
  ```
+ Run Any thing On UI Thread Form Outer Class or Thread
+ -----------------------------------------------------
+ ```java
+ runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(getApplicationContext(), id, Toast.LENGTH_SHORT).show();
+             }
+```
 
 Map
 ---
