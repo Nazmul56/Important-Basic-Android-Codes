@@ -61,7 +61,6 @@ v = (Vibrator) getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE
                 Toast.makeText(getApplicationContext(), id, Toast.LENGTH_SHORT).show();
              }
 ```
-
 Map
 ---
 ```java
@@ -76,7 +75,6 @@ Map
     System.out.println(time);
     System.out.println(age); 
 ```
-
 EditText
 --------
 ```java 
@@ -159,13 +157,11 @@ Pause For 1 Second
 ------------------
 ```java
 try {
-
-
-                Thread.sleep(2000);
-                // i=1000;
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        Thread.sleep(2000);
+        // i=1000;
+    } catch (InterruptedException e) {
+         e.printStackTrace();
+    }
 ```
 Simple Timer
 ------------
@@ -245,6 +241,31 @@ Handler As Do Any Task After 5sec
                 finish();
             }
         }, SPLASH_TIME_OUT);
+```
+Timer
+-----
+```java
+     new Timer().schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    // this code will be executed after 2 secondst
+                    Log.d("Count", "a");
+                    client.disconnect_peer();
+                    onReject();
+                    try {
+                        client.sendMessage(remoteCallerId, "Reject", null, false );
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            incominglinearLayout.setVisibility(View.GONE);
+                        }
+                    });
+                    client.disconnect_peer();
+                }
+            }, 5000);*/
 ```
 Different String Format
 -----------------------
