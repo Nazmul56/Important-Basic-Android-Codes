@@ -15,3 +15,8 @@ Image Fit to Scteen
  ```xml
  android:layoutDirection="ltr"
  ```
+ AlignParent
+ ```xml
+ android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+ ```
