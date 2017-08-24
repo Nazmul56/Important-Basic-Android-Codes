@@ -18,12 +18,12 @@ Image Fit to Scteen
  
  android:layout_gravity="center"
  android:layout_gravity="center_horizontal"
-  android:layout_gravity="center_vertical"
+ android:layout_gravity="center_vertical"
  
  ```
  AlignParent
  -----------
  ```xml
  android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
+ android:layout_alignParentLeft="true"
  ```
