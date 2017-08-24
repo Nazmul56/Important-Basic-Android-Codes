@@ -11,11 +11,18 @@ Image Fit to Scteen
      android:scaleType="centerCrop">
  </ImageView>
  ```
- Layout Garavity Direction
+ Layout Gravity Direction
+ -------------------------
  ```xml
- android:layoutDirection="ltr"
+ android:layoutDirection="ltr" <!--Full Layout Draw left to Right -->
+ 
+ android:layout_gravity="center"
+ android:layout_gravity="center_horizontal"
+  android:layout_gravity="center_vertical"
+ 
  ```
  AlignParent
+ -----------
  ```xml
  android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
