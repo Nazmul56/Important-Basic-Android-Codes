@@ -18,6 +18,23 @@ Button sites =  (Button) findViewById(R.id.site);
             }
         });
 ```
+or
+XML
+```xml
+   <Button
+            android:id="@+id/pick_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pick Photo"
+            android:onClick="pickPhotoClicked"
+            />
+```
+Java
+```java
+public void pickPhotoClicked(View view) {
+//Action
+}
+```
 Intent
 ------
 ```java
