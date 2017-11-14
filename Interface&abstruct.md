@@ -1,6 +1,8 @@
-##Interface 
+Interface
+=========
 
-#class A 
+class A 
+--------
 
 ```java
 public class A implements B.MyInterface {
@@ -18,7 +20,8 @@ public void onExtra(String X){
 }
 ```
 
-#class B
+class B
+-------
 
 ```java
 public class B {
