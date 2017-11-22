@@ -120,6 +120,7 @@ window.xml
 ```
 
 Call This Floating Activity From Any Activity
+---------------------------------------------
 
 ```java
    startService(new Intent(MainActivity.this,FloatingWindow.class));
