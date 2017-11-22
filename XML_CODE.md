@@ -27,3 +27,23 @@ Image Fit to Scteen
  android:layout_alignParentBottom="true"
  android:layout_alignParentLeft="true"
  ```
+Make Center a Button
+--------------------
+```xml
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            android:id = "@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+</LinearLayout>
+```
