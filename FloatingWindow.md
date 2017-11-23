@@ -5,6 +5,7 @@ mainifest.xml
 -------------
 ```xml
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <service android:name=".FloatingWindow" />
 ```
 Floating activity 
 FloatingWindow.java
@@ -13,20 +14,8 @@ FloatingWindow.java
 public class FloatingWindow extends Service {
 
     WindowManager wm;
-    LinearLayout ll;
     View view;
-    GLSurfaceView wsv;
 
-
-
-    //private VideoRendererGui.ScalingType scalingType = VideoRendererGui.ScalingType.SCALE_ASPECT_FILL;
-    private RendererCommon.ScalingType scalingType = RendererCommon.ScalingType.SCALE_ASPECT_FILL;
-
-    private WebRtcClient client;
-    private String mSocketAddress;
-
-    MediaStream remoteStream = null;
-    MediaStream localStream;
     @Override
     public IBinder onBind(Intent intent) {
         // TODO Auto-generated method stub
@@ -37,14 +26,26 @@ public class FloatingWindow extends Service {
     public void onCreate() {
         // TODO Auto-generated method stub
         super.onCreate();
+
+        wm = (WindowManager) getSystemService(WINDOW_SERVICE);
+        
+        final LayoutParams parameters = new LayoutParams(
+                500, 500, LayoutParams.TYPE_PHONE,
+                LayoutParams.FLAG_NOT_FOCUSABLE,
+                PixelFormat.TRANSLUCENT);
+        parameters.gravity = Gravity.TOP | Gravity.LEFT;
+        parameters.x = 0;
+        parameters.y = 0;
+
         LayoutInflater layoutInflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         view = layoutInflater.inflate(R.layout.window, null);
-        
-       Button  b = (Button) view.findViewById(R.id.bt_stop);
 
-  
 
-// TODO OnTouch Listener
+       Button b = (Button) view.findViewById(R.id.bt_stop);
+
+        wm.addView(view, parameters);
+
+        // TODO OnTouch Listener
         view.setOnTouchListener(new View.OnTouchListener() {
             LayoutParams updatedParameters = parameters;
             double x;
@@ -80,7 +81,6 @@ public class FloatingWindow extends Service {
             }
         });
 
-
        b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,11 +91,13 @@ public class FloatingWindow extends Service {
         });
     }
 
+
     @Override
     public void onDestroy() {
         super.onDestroy();
         stopSelf();
     }
+
 }
 ```
 
