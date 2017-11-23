@@ -1,3 +1,4 @@
+```java
 package bd.mil.army.crs;
 
 import android.app.Dialog;
@@ -266,3 +267,4 @@ public class LogActivity extends AppCompatActivity {
         return logMsgs;
     }*/
 }
+```
