@@ -362,3 +362,4 @@ http://inducesmile.com/android/android-gridlayoutmanager-with-recyclerview-in-ma
 http://stackoverflow.com/questions/21980324/how-to-display-only-one-time-login-and-then-after-start-application-directly-in
 Sound Cloud App Link http://www.sitepoint.com/develop-music-streaming-android-app/
 http://upadhyayjiteshandroid.blogspot.in/2013/01/android-working-with-shared-preferences.html
+https://google-developer-training.gitbooks.io/android-developer-advanced-course-practicals/content/unit-1-expand-the-user-experience/lesson-2-app-widgets/2-1-p-app-widgets/2-1-p-app-widgets.html
