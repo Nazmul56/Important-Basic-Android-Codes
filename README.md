@@ -168,7 +168,11 @@ JSON Generator
     mysqli_close('$conn');
 ?>
 ```
-
+Call Static from non static
+---------------------------
+```java
+ ((MainActivity) getContext()).refreshFragment(); // Convert Static for non Static
+```
 
 Pause For 1 Second
 ------------------
